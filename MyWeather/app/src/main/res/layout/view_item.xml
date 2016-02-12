@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/dateDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:text="FRI"
+        android:textColor="#99000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/dateDay"
+        android:layout_below="@+id/dateDay"
+        android:text="05.04"
+        android:textColor="#66000000"
+        android:textSize="18sp"
+        android:paddingBottom="8dp"/>
+
+    <ImageView
+        android:id="@+id/wetherImg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dateDay"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/wetherImg"
+        android:text="PATCHY RAIN NEARBY"
+        android:textColor="#99000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/maxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/value"
+        android:layout_alignTop="@+id/date"
+        android:layout_below="@+id/value"
+        android:text="6C"
+        android:textColor="#99000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/minTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/date"
+        android:layout_below="@+id/value"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/maxTemp"
+        android:text="6C"
+        android:textColor="#66000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/minTemp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/date"
+        android:layout_below="@+id/value"
+        android:text="8:30PM"
+        android:textColor="#99000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/sunrise"
+        android:layout_marginLeft="5dp"
+        android:layout_alignTop="@+id/date"
+        android:layout_below="@+id/value"
+        android:text="4:30AM"
+        android:textColor="#66000000"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
