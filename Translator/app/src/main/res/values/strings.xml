@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Translator</string>
+    <string name="action_settings">Settings</string>
+    <string name="api_key">trnsl.1.1.20160425T084208Z.53b078e2300dd613.4d0e8c0899240f4d55ded63c9eb035eaee10b923</string>
+    <string name="hint">Введите текст</string>
+    <string name="en">Английский</string>
+    <string name="ru">Русский</string>
+    <string name="error">Ошибка</string>
+</resources>

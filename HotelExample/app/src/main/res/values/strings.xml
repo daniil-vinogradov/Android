@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HotelExample</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">Номер эконом класса</string>
+    <string name="sub_title">Площадь номера: 19 м</string>
+    <string name="eating">Питание</string>
+    <string name="cancel">Отмена бронирования</string>
+    <string name="last">Осталось 10 номеров</string>
+    <string name="show_more">Показать ещё</string>
+    <string name="hide">Скрыть</string>
+    <string name="breakfast">ВВ - Завтрак</string>
+    <string name="tooltip">Пример тултипа</string>
+</resources>
