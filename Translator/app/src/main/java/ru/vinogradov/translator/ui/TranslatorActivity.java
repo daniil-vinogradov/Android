@@ -54,6 +54,9 @@ public class TranslatorActivity extends AppCompatActivity implements LoaderManag
         clear.setOnClickListener(this);
         replace.setOnClickListener(this);
 
+        if (savedInstanceState != null)
+            lang = savedInstanceState.getString(LANG_TO_TRANSLATE);
+
         setLanguages();
 
         input.addTextChangedListener(new TextWatcher() {
@@ -87,6 +90,12 @@ public class TranslatorActivity extends AppCompatActivity implements LoaderManag
         String[] abbrevs = lang.split("-");
         firstLang.setText(getResources().getString(this.getResources().getIdentifier(abbrevs[0], "string", this.getPackageName())));
         secondLang.setText(getResources().getString(this.getResources().getIdentifier(abbrevs[1], "string", this.getPackageName())));
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString(LANG_TO_TRANSLATE,lang);
+        super.onSaveInstanceState(outState);
     }
 
     @Override
