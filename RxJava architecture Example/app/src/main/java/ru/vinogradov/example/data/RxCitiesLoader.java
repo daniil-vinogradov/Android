@@ -30,7 +30,7 @@ public class RxCitiesLoader extends Loader {
     protected void onStartLoading() {
         super.onStartLoading();
 
-        subscription = observable.subscribe(this::deliverResult);
+        subscription = observable.subscribe(this::deliverResult, throwable -> deliverResult(null));
 
     }
 

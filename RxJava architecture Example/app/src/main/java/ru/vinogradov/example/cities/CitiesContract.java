@@ -15,6 +15,7 @@ public interface CitiesContract {
 
     interface Presenter {
         void loadCities();
+        void retryLoading();
     }
 
 }

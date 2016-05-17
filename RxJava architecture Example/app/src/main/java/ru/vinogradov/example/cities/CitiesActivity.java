@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import java.util.List;
@@ -24,6 +26,9 @@ public class CitiesActivity extends AppCompatActivity implements CitiesContract.
     RecyclerView recyclerView;
     CitiesAdapter citiesAdapter;
 
+    LinearLayout errorMsg;
+    Button retry;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,9 +39,14 @@ public class CitiesActivity extends AppCompatActivity implements CitiesContract.
         progressBar = (ProgressBar) findViewById(R.id.progress_bar);
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
+        errorMsg = (LinearLayout) findViewById(R.id.error_message);
+        retry = (Button) findViewById(R.id.retry);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         citiesAdapter = new CitiesAdapter();
         recyclerView.setAdapter(citiesAdapter);
+
+        retry.setOnClickListener(v -> citiesPresenter.retryLoading());
 
         RxCitiesLoader citiesLoader = new RxCitiesLoader(this);
 
@@ -48,17 +58,20 @@ public class CitiesActivity extends AppCompatActivity implements CitiesContract.
     @Override
     public void showProgressBar() {
         progressBar.setVisibility(View.VISIBLE);
+        errorMsg.setVisibility(View.GONE);
     }
 
     @Override
     public void setData(List<City> cities) {
         progressBar.setVisibility(View.GONE);
+        errorMsg.setVisibility(View.GONE);
         citiesAdapter.setData(cities);
     }
 
 
     @Override
     public void setErrorMessage() {
-        Log.d("MYAPP", "error");
+        progressBar.setVisibility(View.GONE);
+        errorMsg.setVisibility(View.VISIBLE);
     }
 }

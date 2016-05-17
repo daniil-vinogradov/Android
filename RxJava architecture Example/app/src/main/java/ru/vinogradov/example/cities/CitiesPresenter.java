@@ -1,6 +1,7 @@
 package ru.vinogradov.example.cities;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
@@ -26,12 +27,18 @@ public class CitiesPresenter implements CitiesContract.Presenter, LoaderManager.
 
     @Override
     public void loadCities() {
-        citiesView.showProgressBar();
         loaderManager.initLoader(CITIES_LOADER, Bundle.EMPTY, this);
     }
 
     @Override
+    public void retryLoading() {
+        loader = new RxCitiesLoader((Context) citiesView);
+        loaderManager.restartLoader(CITIES_LOADER, Bundle.EMPTY, this);
+    }
+
+    @Override
     public Loader<List<City>> onCreateLoader(int id, Bundle args) {
+        citiesView.showProgressBar();
         return loader;
     }
 
@@ -40,11 +47,9 @@ public class CitiesPresenter implements CitiesContract.Presenter, LoaderManager.
         if (data == null)
             citiesView.setErrorMessage();
         else citiesView.setData(data);
-
     }
 
     @Override
     public void onLoaderReset(Loader<List<City>> loader) {
-
     }
 }
