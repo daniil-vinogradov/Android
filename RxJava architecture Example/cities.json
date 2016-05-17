@@ -2,36 +2,51 @@
 	{
 		"id":1,
 		"name":"Moscow",
-		"country":"Russia",
-	},
-	{
-		"id":1,
-		"name":"Moscow",
-		"country":"Russia",
-	},
-	{
-		"id":1,
-		"name":"Moscow",
-		"country":"Russia",
-	},
-	{
-		"id":1,
-		"name":"Moscow",
-		"country":"Russia",
-	},
-	{
-		"id":1,
-		"name":"Moscow",
-		"country":"Russia",
-	},
-	{
-		"id":1,
-		"name":"Moscow",
-		"country":"Russia",
+		"country":"Russia"
 	},
 	{
 		"id":2,
-		"name":"Berlin",
-		"country":"Germany",
+		"name":"Ottawa",
+		"country":"Canada"
+	},
+	{
+		"id":3,
+		"name":"Copenhagen",
+		"country":"Denmark"
+	},
+	{
+		"id":4,
+		"name":"Paris",
+		"country":"France"
+	},
+	{
+		"id":5,
+		"name":"Athens",
+		"country":"Greece"
+	},
+	{
+		"id":6,
+		"name":"Oslo",
+		"country":"Norway"
+	},
+	{
+		"id":7,
+		"name":"Warsaw",
+		"country":"Poland"
+	},
+	{
+		"id":8,
+		"name":"Stockholm",
+		"country":"Sweden"
+	},
+	{
+		"id":9,
+		"name":"Bern",
+		"country":"Switzerland"
+	},
+	{
+		"id":10,
+		"name":"Moscow",
+		"country":"Russia"
 	}
 ]
