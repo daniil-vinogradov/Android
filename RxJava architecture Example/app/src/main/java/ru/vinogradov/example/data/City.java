@@ -9,7 +9,6 @@ public class City {
 
     private String country;
 
-    private String description;
 
     public City() {
     }
@@ -38,11 +37,4 @@ public class City {
         this.country = country;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

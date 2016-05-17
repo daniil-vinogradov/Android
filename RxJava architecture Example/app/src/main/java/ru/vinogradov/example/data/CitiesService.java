@@ -8,7 +8,7 @@ import rx.Observable;
 
 public interface CitiesService {
 
-    @GET("data/2.5/weather")
+    @GET("/daniil-vinogradov/JavaAndroid/master/RxJava%20architecture%20Example/cities.json")
     Observable<List<City>> getCities();
 
 }

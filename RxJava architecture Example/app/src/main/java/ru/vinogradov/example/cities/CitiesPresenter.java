@@ -26,12 +26,12 @@ public class CitiesPresenter implements CitiesContract.Presenter, LoaderManager.
 
     @Override
     public void loadCities() {
+        citiesView.showProgressBar();
         loaderManager.initLoader(CITIES_LOADER, Bundle.EMPTY, this);
     }
 
     @Override
     public Loader<List<City>> onCreateLoader(int id, Bundle args) {
-        citiesView.showProgressBar();
         return loader;
     }
 

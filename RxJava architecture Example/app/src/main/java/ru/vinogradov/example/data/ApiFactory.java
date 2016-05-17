@@ -13,7 +13,7 @@ public class ApiFactory {
 
     private static Retrofit getRetrofit() {
         return new Retrofit.Builder()
-                .baseUrl("http://api.openweathermap.org/")
+                .baseUrl("https://raw.githubusercontent.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();

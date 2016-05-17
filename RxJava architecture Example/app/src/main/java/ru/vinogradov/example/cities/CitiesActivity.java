@@ -2,8 +2,12 @@ package ru.vinogradov.example.cities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import java.util.List;
 
@@ -16,12 +20,23 @@ public class CitiesActivity extends AppCompatActivity implements CitiesContract.
 
     CitiesContract.Presenter citiesPresenter;
 
+    ProgressBar progressBar;
+    RecyclerView recyclerView;
+    CitiesAdapter citiesAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        citiesAdapter = new CitiesAdapter();
+        recyclerView.setAdapter(citiesAdapter);
 
         RxCitiesLoader citiesLoader = new RxCitiesLoader(this);
 
@@ -32,13 +47,13 @@ public class CitiesActivity extends AppCompatActivity implements CitiesContract.
 
     @Override
     public void showProgressBar() {
-        Log.d("MYAPP", "showProgressBar");
+        progressBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void setData(List<City> cities) {
-        Observable.from(cities)
-                .subscribe(city -> Log.d("MYAPP", city.getName()));
+        progressBar.setVisibility(View.GONE);
+        citiesAdapter.setData(cities);
     }
 
 
