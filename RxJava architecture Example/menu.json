@@ -2,19 +2,19 @@
   "result": "OK",
   "breakfast": [
       {
-        "id": 1
+        "id": 1,
         "name": "Завтрак 1",
         "price": "200 руб.",
         "photo": "http://vashsport.com/wp-content/uploads/pravilnyj-zavtrak.jpg"
       },
       {
-        "id": 2
+        "id": 2,
         "name": "Завтрак 2",
         "price": "250 руб.",
         "photo": "http://xcook.info/sites/default/files/products/9/na-zavtrak.jpg"
       },
       {
-        "id": 3
+        "id": 3,
         "name": "Завтрак 3",
         "price": "300 руб.",
         "photo": "http://summermaria.com/wp-content/uploads/2014/02/poleznyiy-zavtrak.jpg"
@@ -23,19 +23,19 @@
     
   "snacks": [
       {
-        "id": 4
+        "id": 4,
         "name": "Закуска 1",
         "price": "200 руб.",
         "photo": "http://v.img.com.ua/b/600x500/b/37/b13da4bab5dd99b60a7b5006b224e37b.jpg"
       },
       {
-        "id": 5
+        "id": 5,
         "name": "Закуска 2",
         "price": "250 руб.",
         "photo": "http://v.img.com.ua/b/600x500/2/27/e03875b1218c17a7bcd62ff71e6b6272.jpg"
       },
       {
-        "id": 6
+        "id": 6,
         "name": "Закуска 3",
         "price": "300 руб.",
         "photo": "http://s1.tchkcdn.com/g2-rym4_bbjDWHJ2mNXjEOzVQ/lady/660x480/f/0/1-8-9-0-30890/70d7bbb1f4667cf86e6afa1d250189ec_shutterstock_134921111.jpg"
@@ -44,13 +44,13 @@
     
   "drinks": [
       {
-        "id": 7
+        "id": 7,
         "name": "Чай",
         "price": "200 руб.",
         "photo": ""
       },
       {
-        "id": 8
+        "id": 8,
         "name": "Кофе",
         "price": "250 руб.",
         "photo": "http://v.img.com.ua/b/600x500/2/27/e03875b1218c17a7bcd62ff71e6b6272.jpg"
