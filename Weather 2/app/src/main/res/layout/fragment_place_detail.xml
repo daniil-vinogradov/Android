@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/data_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/photo_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/days_container"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"/>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/gradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/days_container"
+        android:background="@drawable/gradient"
+        android:visibility="invisible"/>
+
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/Base.TextAppearance.AppCompat.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/days_container"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:paddingBottom="48dp"
+        android:text="Cloudly"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/description"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Saint Petersburg, Russia"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/place"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-light"
+        android:text="17°"
+        android:textColor="@android:color/white"
+        android:textSize="80sp"
+        android:visibility="invisible"/>
+
+    <FrameLayout
+        android:id="@+id/days_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/card_blue">
+
+        <include layout="@layout/error"/>
+
+        <LinearLayout
+            android:id="@+id/days"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible"/>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:theme="@style/WhiteProgressBar"/>
+
+    </FrameLayout>
+
+</RelativeLayout>
