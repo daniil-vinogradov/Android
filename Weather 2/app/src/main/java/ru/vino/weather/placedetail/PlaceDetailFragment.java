@@ -243,7 +243,7 @@ public class PlaceDetailFragment extends Fragment implements PlaceDetailContract
         photo.setVisibility(View.VISIBLE);
 
         Palette.from(bitmap).generate(p -> {
-            TransitionManager.beginDelayedTransition(dataContainer, new Recolor().setStartDelay(250));
+            TransitionManager.beginDelayedTransition(dataContainer, new Recolor().setStartDelay(350));
             daysContainer.setBackgroundDrawable(new ColorDrawable(p.getMutedColor(getActivity().getResources().getColor(R.color.card_blue))));
         });
 

@@ -7,7 +7,11 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.animation.FastOutLinearInInterpolator;
+import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.content.res.AppCompatResources;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
@@ -113,9 +117,10 @@ public class GuiUtils {
     }
 
     public static Drawable getDrawable(int icon, Context context) {
+        // AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         String name = "ic_" + String.valueOf(icon);
         int resourceId = context.getResources().getIdentifier(name, "drawable", context.getPackageName());
-        return context.getResources().getDrawable(resourceId);
+        return AppCompatResources.getDrawable(context, resourceId);
     }
 
 
