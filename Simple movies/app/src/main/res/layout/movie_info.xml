@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/release_title"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:text="Вышел в прокат"/>
+
+    <TextView
+        android:id="@+id/time_title"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/release_title"
+        android:paddingBottom="8dp"
+        android:text="Продолжительность"/>
+
+    <TextView
+        android:id="@+id/genre_title"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_title"
+        android:paddingBottom="8dp"
+        android:text="Жанр"/>
+
+    <TextView
+        android:id="@+id/budget_title"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/genre_title"
+        android:paddingBottom="8dp"
+        android:text="Бюджет"/>
+
+    <TextView
+        android:id="@+id/language_title"
+        style="@style/Base.TextAppearance.AppCompat.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/budget_title"
+        android:text="Язык"/>
+
+    <TextView
+        android:id="@+id/release"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/release_title"
+        android:gravity="right"
+        android:paddingBottom="8dp"
+        android:text="14 мая 2006 г."/>
+
+    <TextView
+        android:id="@+id/runtime"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/time_title"
+        android:layout_toRightOf="@id/time_title"
+        android:gravity="right"
+        android:paddingBottom="8dp"
+        android:text="120 мин"/>
+
+    <TextView
+        android:id="@+id/genre"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/genre_title"
+        android:layout_toRightOf="@id/genre_title"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:lines="1"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:text="боевик"/>
+
+    <TextView
+        android:id="@+id/budget"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/budget_title"
+        android:layout_toRightOf="@id/budget_title"
+        android:gravity="right"
+        android:paddingBottom="8dp"
+        android:text="$150 000 000"/>
+
+    <TextView
+        android:id="@+id/language"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/language_title"
+        android:layout_toRightOf="@id/language_title"
+        android:gravity="right"
+        android:text="English"/>
+
+</RelativeLayout>

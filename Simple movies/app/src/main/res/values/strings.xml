@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="title_movies">Movies</string>
+
+    <string name="err_connection">Cannot load data. Please check your network connection.</string>
+    <string name="err_try_again">Try again</string>
+
+    <string-array name="movie_titles">
+        <item>Popular</item>
+        <item>Now playing</item>
+        <item>Upcoming</item>
+    </string-array>
+
+    <string name="movie_popularity">%1$.1f/10</string>
+    <string name="movie_votes">%1$d votes</string>
+    <string name="movie_runtime">%1$d min</string>
+
+    <string name="persons_cast_title">Cast: %1$s</string>
+    <string name="persons_crew_title">Crew: %1$s</string>
+
+    <string name="title_activity_movie_info">MovieInfoActivity</string>
+    <string name="lorem">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+</resources>
